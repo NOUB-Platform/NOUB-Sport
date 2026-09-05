@@ -1,0 +1,25 @@
+/*
+ * Filename: css/layout/grid.css
+ * Version: 2.1.0 (TRANSPARENT FIX)
+ * Description: Main App Container Layout.
+ */
+
+#app-container {
+    width: 100%; 
+    height: 100%;
+    max-width: 500px; 
+    margin: 0 auto; 
+    background: transparent; 
+    position: relative;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5); 
+}
+
+#main-content {
+    position: absolute;
+    top: var(--header-height);
+    bottom: var(--nav-height);
+    width: 100%;
+    overflow-y: auto;
+    padding: 0;
+    background: transparent;
+}

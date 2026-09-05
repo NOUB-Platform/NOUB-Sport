@@ -1,0 +1,68 @@
+/*
+ * Project: NOUB SPORTS ECOSYSTEM
+ * Filename: css/base/reset.css
+ * Version: Noub Sports_beta 2.6.0 (ROYAL THEME & SCROLL LOCK MASTER)
+ * Status: Production Ready
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+body {
+    background: radial-gradient(
+        circle at center, 
+        #0f2e1d 0%, 
+        #09160e 60%, 
+        #000000 100%
+    );
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text-main);
+    font-family: var(--font-primary);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    direction: rtl;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.active {
+    display: flex !important;
+}
+
+section, .view-section {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-main);
+}
+
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+    }
+}

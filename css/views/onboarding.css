@@ -1,0 +1,102 @@
+/*
+ * Filename: css/views/onboarding.css
+ * Version: 5.2.0 (MERGED MASTER)
+ * Description: Styles for Minting Studio & Auth Tabs.
+ */
+
+#view-onboarding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
+
+.auth-box {
+    background-color: var(--bg-surface);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 24px;
+    padding: 25px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-box::before {
+    content: '';
+    position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(212,175,55,0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.auth-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: rgba(0,0,0,0.3);
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.btn-tab {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-family: var(--font-primary);
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+
+.btn-tab.active {
+    background: var(--gold-main);
+    color: #000;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.avatar-studio {
+    background: radial-gradient(circle, #252525 0%, #111 100%);
+    border: 2px solid var(--gold-dim);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+}
+
+.avatar-preview {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.avatar-placeholder { font-size: 80px; color: var(--text-grey); opacity: 0.5; }
+
+.avatar-controls { display: flex; flex-direction: column; gap: 12px; }
+
+.control-row {
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(255,255,255,0.03); padding: 10px 15px;
+    border-radius: 12px; border: 1px solid rgba(255,255,255,0.05);
+}
+
+.control-row label { font-size: 0.85rem; color: var(--text-muted); font-weight: bold; }
+
+.selector { display: flex; align-items: center; gap: 15px; }
+
+.selector span { width: 25px; text-align: center; font-family: var(--font-orbitron); color: #fff; font-size: 1.1rem; }

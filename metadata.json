@@ -1,0 +1,6 @@
+{
+  "name": "NOUB Sports",
+  "description": "منظومة نوب سبورتس المتكاملة لإدارة اللاعبين، الفرق، والمباريات والدورات الرمضانية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

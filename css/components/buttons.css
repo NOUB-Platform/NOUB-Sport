@@ -1,0 +1,121 @@
+/*
+ * Project: NOUB SPORTS ECOSYSTEM
+ * Filename: css/components/buttons.css
+ * Version: Noub Sports_beta 0.0.6 (ROYAL 3D BUTTONS)
+ * Status: Production Ready
+ */
+
+.btn-primary {
+    width: 100%;
+    padding: 14px 0;
+    margin-top: 15px;
+    background: linear-gradient(
+        180deg, 
+        #FFD700 0%,
+        #D4AF37 50%,
+        #aa8820 100%
+    );
+    border: 1px solid #ffeebb;
+    border-radius: 14px;
+    color: #1a0f00;
+    font-family: var(--font-sport);
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.5),
+        0 4px 15px rgba(212, 175, 55, 0.4),
+        0 2px 0 #8a7020;
+    cursor: pointer;
+    transition: all 0.15s ease-out;
+    display: flex; justify-content: center; align-items: center; gap: 10px;
+}
+
+.btn-primary:hover {
+    filter: brightness(1.1);
+    box-shadow: 
+        inset 0 1px 0 rgba(255,255,255,0.6),
+        0 6px 20px rgba(212, 175, 55, 0.6),
+        0 2px 0 #8a7020;
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(2px);
+    box-shadow: 
+        inset 0 2px 5px rgba(0,0,0,0.2),
+        0 0 0 #8a7020;
+}
+
+.btn-primary:disabled {
+    background: #333;
+    color: #555;
+    border: 1px solid #444;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.btn-action-secondary {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    color: var(--text-muted);
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-action-secondary:hover {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: var(--gold-main);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-action-secondary:active {
+    transform: scale(0.95);
+}
+
+.btn-action-secondary i {
+    color: var(--gold-main);
+}
+
+.btn-control {
+    width: 38px; height: 38px;
+    background: linear-gradient(145deg, #1e1e1e, #151515);
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: var(--gold-main);
+    display: flex; justify-content: center; align-items: center;
+    cursor: pointer;
+    box-shadow: 
+        5px 5px 10px #0b0b0b, 
+        -5px -5px 10px #252525;
+    transition: all 0.1s;
+}
+
+.btn-control:active {
+    box-shadow: 
+        inset 5px 5px 10px #0b0b0b, 
+        inset -5px -5px 10px #252525;
+    color: #fff;
+}
+
+.action-card.danger, .btn-reject {
+    background: rgba(239, 68, 68, 0.1) !important;
+    border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    color: #ff6b6b !important;
+}
+
+.action-card.danger:hover, .btn-reject:hover {
+    background: rgba(239, 68, 68, 0.2) !important;
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.3) !important;
+    border-color: #ff6b6b !important;
+}

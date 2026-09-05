@@ -1,0 +1,109 @@
+/*
+ * Project: NOUB SPORTS ECOSYSTEM
+ * Filename: css/views/home.css
+ * Version: Noub Sports_beta 3.0.0 (ROYAL TRANSPARENCY MASTER)
+ * Status: Production Ready
+ */
+
+#view-home {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent !important;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.home-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; 
+}
+
+.home-tabs { 
+    display: flex; 
+    gap: 40px; 
+    width: 80%; 
+    justify-content: center;
+    margin-bottom: 5px; 
+    padding-bottom: 8px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    z-index: 10;
+}
+
+.htab { 
+    background: none; 
+    border: none; 
+    color: var(--text-muted);
+    font-family: var(--font-primary); 
+    font-weight: bold; 
+    cursor: pointer; 
+    font-size: 1rem; 
+    position: relative; 
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.htab.active { 
+    color: var(--gold-main); 
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.htab.active::after {
+    content: ''; 
+    position: absolute; 
+    bottom: -9px; 
+    left: 0; 
+    width: 100%; 
+    height: 3px; 
+    background: var(--gold-main);
+    box-shadow: 0 0 10px var(--gold-main);
+    border-radius: 2px;
+}
+
+#home-dynamic-content { 
+    width: 100%; 
+    height: auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    perspective: 1000px; 
+}
+
+.home-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    background: none !important; 
+    border: none !important; 
+    box-shadow: none !important;
+    padding: 0;
+}
+
+.fade-in { 
+    animation: fadeInScale 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); 
+}
+
+@keyframes fadeInScale { 
+    from { 
+        opacity: 0; 
+        transform: scale(0.95); 
+    } 
+    to { 
+        opacity: 1; 
+        transform: scale(1); 
+    } 
+}

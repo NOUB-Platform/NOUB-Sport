@@ -1,0 +1,78 @@
+/*
+ * Filename: css/components/inputs.css
+ * Version: 6.0.0 (Compact Size 10%)
+ * Description: Input fields styling.
+ */
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="number"], 
+input[type="datetime-local"],
+select {
+    width: 100%;
+    height: 48px;
+    padding: 0 12px;
+    background: var(--bg-input);
+    border: 1px solid #333;
+    border-radius: 10px;
+    color: white;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    appearance: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: var(--gold-main);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.1);
+}
+
+.radio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+}
+
+.radio-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.radio-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-card span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    background: var(--bg-input);
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-size: 0.7rem;
+    color: var(--text-grey);
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.radio-card input:checked + span {
+    background: var(--gold-main);
+    color: #000;
+    border-color: var(--gold-main);
+    box-shadow: 0 2px 8px rgba(212,175,55,0.25);
+}

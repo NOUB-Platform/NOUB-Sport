@@ -1,0 +1,243 @@
+/*
+ * Project: NOUB SPORTS ECOSYSTEM
+ * Filename: css/views/scout.css
+ * Version: Noub Sports_beta 3.0.0 (VISUAL IDENTITY UPGRADE)
+ * Status: Production Ready
+ */
+
+#view-scout {
+    padding: 20px;
+    padding-bottom: 120px;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.scout-header {
+    display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px;
+}
+
+.scope-wrapper {
+    display: flex; justify-content: center; margin-bottom: 5px;
+}
+
+.scope-btn {
+    flex: 1;
+    background: transparent;
+    border: 1px solid #333;
+    color: var(--text-muted);
+    padding: 10px;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+.scope-btn:first-child { border-radius: 0 12px 12px 0; border-left: none; }
+.scope-btn:last-child { border-radius: 12px 0 0 12px; }
+
+.scope-btn.active {
+    background: var(--gold-main);
+    color: #000;
+    border-color: var(--gold-main);
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+}
+
+.search-bar-wrapper {
+    background: var(--bg-input);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 30px;
+    padding: 12px 20px;
+    display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: border-color 0.3s;
+}
+.search-bar-wrapper:focus-within { border-color: var(--gold-main); }
+.search-bar-wrapper i { color: var(--gold-main); font-size: 1.1rem; }
+.search-bar-wrapper input {
+    background: transparent; border: none; padding: 0; width: 100%;
+    font-size: 1rem; color: #fff; font-family: var(--font-primary);
+}
+
+.filter-pills {
+    display: flex; gap: 10px; overflow-x: auto; padding-bottom: 5px;
+    scrollbar-width: none;
+}
+.filter-pills::-webkit-scrollbar { display: none; }
+
+.pill {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-muted);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    display: flex; align-items: center; gap: 8px;
+    transition: all 0.2s;
+}
+.pill:hover { background: rgba(255,255,255,0.1); }
+.pill.active {
+    background: var(--gold-main);
+    color: #000;
+    border-color: var(--gold-main);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+}
+
+.trending-section { margin-bottom: 30px; animation: fadeIn 0.5s ease-out; }
+.trending-section h4 { 
+    color: var(--gold-main); margin-bottom: 15px; font-size: 0.95rem; 
+    border-right: 3px solid var(--gold-main); padding-right: 10px; 
+    font-family: var(--font-sport); 
+}
+
+.trending-scroll {
+    display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;
+    scrollbar-width: none;
+}
+
+.mini-trend-card {
+    background: linear-gradient(145deg, #252525, #111);
+    border: 1px solid var(--gold-dim);
+    border-radius: 16px;
+    padding: 12px;
+    min-width: 90px;
+    text-align: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+.mini-trend-card .mini-avatar { font-size: 1.5rem; margin-bottom: 5px; }
+.mini-trend-card span { 
+    display: block; font-size: 0.75rem; margin-top: 5px; color: #fff; 
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 80px;
+}
+
+.market-grid-section h4 { 
+    color: var(--text-muted); margin-bottom: 15px; font-size: 0.9rem; 
+}
+
+.market-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.scout-card {
+    position: relative;
+    height: 260px;
+    border-radius: 16px;
+    background: linear-gradient(to top, #000 10%, rgba(20,20,20,0.5) 100%);
+    background-size: cover;
+    background-position: center;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #555; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.scout-card:hover {
+    transform: translateY(-5px);
+    z-index: 10;
+}
+
+.scout-card.rarity-common { border-color: #666; }
+
+.scout-card.rarity-silver {
+    border-color: #C0C0C0;
+    box-shadow: 0 0 15px rgba(192, 192, 192, 0.15), 0 5px 10px #000;
+}
+
+.scout-card.rarity-gold {
+    border-color: #D4AF37;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.25), 0 5px 10px #000;
+}
+
+.scout-card.rarity-diamond {
+    border-color: #b9f2ff;
+    box-shadow: 0 0 25px rgba(185, 242, 255, 0.4), 0 5px 15px #000;
+    animation: pulseBorder 3s infinite;
+}
+
+@keyframes pulseBorder {
+    0% { border-color: #b9f2ff; }
+    50% { border-color: #00eaff; }
+    100% { border-color: #b9f2ff; }
+}
+
+.scout-card-top {
+    position: absolute; top: 10px; left: 10px; right: 10px;
+    display: flex; justify-content: space-between; z-index: 5;
+}
+
+.scout-pos {
+    background: rgba(0,0,0,0.8);
+    padding: 2px 8px; border-radius: 6px;
+    font-size: 0.7rem; font-weight: bold; color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.scout-rating {
+    font-family: var(--font-orbitron);
+    font-size: 1.2rem; font-weight: 900;
+    color: #fff; text-shadow: 0 2px 4px #000;
+}
+
+.scout-avatar-wrapper {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -60%) scale(0.55); 
+    width: 200px;
+    height: 300px;
+    pointer-events: none;
+    z-index: 1;
+    display: flex; justify-content: center; align-items: flex-end;
+}
+
+.scout-info {
+    position: relative; z-index: 5;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, transparent 100%);
+    padding: 15px 10px 10px 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.scout-info h5 {
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    text-shadow: 0 2px 5px #000;
+    font-family: var(--font-sport);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    text-transform: uppercase;
+}
+
+.scout-tags {
+    margin-top: 4px;
+}
+.scout-tags span {
+    font-size: 0.65rem; color: #aaa;
+    text-transform: uppercase; letter-spacing: 1px;
+}
+
+.scout-card.team-mode {
+    background: linear-gradient(to top, #111 20%, rgba(20,20,30,0.6) 100%);
+    background-size: cover;
+}
+
+.scout-card.team-mode .team-logo-scaler {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+    width: 90px; height: 90px;
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+}
+
+.scout-card.team-mode .team-logo-scaler i {
+    font-size: 2.5rem; color: #fff;
+}
